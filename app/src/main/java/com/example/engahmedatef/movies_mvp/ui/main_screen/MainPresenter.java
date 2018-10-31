@@ -9,10 +9,11 @@ import java.util.List;
 
 public class MainPresenter extends BasePresenter implements MainContract.Presenter {
 
-    private MainContract.View view;
+    private MainContract.View view; // dependency for interface MainContract.View
     private ApiModel apiModel;
 
-    public MainPresenter(MainContract.View view) {
+    public MainPresenter(MainContract.View view) // Injection or inject for interface MainContract.View
+    {
         this.view = view;
         apiModel = new ApiModel();
     }

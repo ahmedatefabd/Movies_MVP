@@ -10,7 +10,9 @@ public interface MainContract {
         void detachView();
     }
 
-    interface View {
+    interface View
+
+    {
 
         void displayError(String msg);
 

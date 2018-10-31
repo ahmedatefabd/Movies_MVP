@@ -36,7 +36,7 @@ public class MainActivity extends BaseActivity implements MainContract.View {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        presenter = new MainPresenter(this);
+        presenter = new MainPresenter(this); // dependency
 
         presenter.getDataMainPresenter(Constant.Api.POPULAR_MOVIES_KEY);
     }
