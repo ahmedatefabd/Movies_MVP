@@ -49,18 +49,18 @@ public class MainActivity extends BaseActivity implements MainContract.View {
 
     }
 
+    @Override
+    public void displayError(String msg) {
+
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+
+    }
+
     private void recycler(List<Movie> movies) {
 
         adapter = new MovieAdapter(MainActivity.this, movies);
         recycler.setLayoutManager(new GridLayoutManager(MainActivity.this, 2));
         recycler.setAdapter(adapter);
-
-    }
-
-    @Override
-    public void displayError(String msg) {
-
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
 
     }
 

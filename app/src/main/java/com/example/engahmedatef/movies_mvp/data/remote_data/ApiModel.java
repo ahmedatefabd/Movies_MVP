@@ -3,13 +3,13 @@ package com.example.engahmedatef.movies_mvp.data.remote_data;
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
-import com.example.engahmedatef.movies_mvp.callback.OnDataLisener;
+import com.example.engahmedatef.movies_mvp.callback.CB_OnDataLisener;
 import com.example.engahmedatef.movies_mvp.data.local_data.ResponseMovie;
 import com.example.engahmedatef.movies_mvp.util.Constant;
 
 public class ApiModel {
 
-    public void getMovies (String movieType ,final OnDataLisener listener){// referance mn no3 el interface el mogode fe package Callback ma3mol mn agl anadi 3la ay method da5l el interface mn 8eeer no used (ay methodes)
+    public void getMovies (String movieType ,final CB_OnDataLisener listener){// referance mn no3 el interface el mogode fe package Callback ma3mol mn agl anadi 3la ay method da5l el interface mn 8eeer no used (ay methodes)
 
         AndroidNetworking.get(Constant.Api.BASE_URL + movieType ) // BASE_URL-->link-->class->constant->package->util
                 .addQueryParameter(Constant.Api.TOKEN_NAME , Constant.Api.TOKEN_VALUE) // token_URL-->key & value-->class->constant->package->util

@@ -4,7 +4,7 @@ import com.example.engahmedatef.movies_mvp.data.local_data.Movie;
 
 import java.util.List;
 
-public interface OnDataLisener {
+public interface CB_OnDataLisener {
 
     void onSucess(List<Movie> movieList);
 

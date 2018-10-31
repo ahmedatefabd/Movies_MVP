@@ -1,14 +1,9 @@
 package com.example.engahmedatef.movies_mvp.ui.main_screen;
 
-import android.view.View;
-import android.widget.ProgressBar;
-
-import com.example.engahmedatef.movies_mvp.R;
-import com.example.engahmedatef.movies_mvp.callback.OnDataLisener;
+import com.example.engahmedatef.movies_mvp.callback.CB_OnDataLisener;
 import com.example.engahmedatef.movies_mvp.data.local_data.Movie;
 import com.example.engahmedatef.movies_mvp.data.remote_data.ApiModel;
 import com.example.engahmedatef.movies_mvp.ui.base_screen.BasePresenter;
-import com.example.engahmedatef.movies_mvp.util.Constant;
 
 import java.util.List;
 
@@ -23,7 +18,7 @@ public class MainPresenter extends BasePresenter implements MainContract.Present
     }
 
     public void getDataMainPresenter( String type){
-        apiModel.getMovies(type, new OnDataLisener() {
+        apiModel.getMovies(type, new CB_OnDataLisener() {
             @Override
             public void onSucess(List<Movie> movieList) {
                 view.displayData(movieList);
